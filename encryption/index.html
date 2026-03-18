@@ -23,6 +23,7 @@
                 window.location.href = "https://marlongamer6777.github.io/random/encryption/correct_pw.html";
             } else if (pw === "Minecraft") {
                 alert("In Binary bitte")
+                document.getElementById("pw").value = "";
             } else {
                 if (count == 3) {
                     alert("Versuch mal zu dekodieren")
@@ -30,6 +31,7 @@
                     alert("Falsch!");
                     count += 1
                 }
+                document.getElementById("meinInput").value = "";
             }
         }
     </script>
