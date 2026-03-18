@@ -98,27 +98,27 @@ body::before {
 }
 
 .code-box {
-    position: relative;
+    position: relative;        /* Container für absoluten Button */
     background: #000;
     border: 1px solid #00ff00;
     padding: 15px;
-    max-height: 200px;       /* vertikale Höhe begrenzen */
-    max-width: 500px;        /* optionale Breite begrenzen */
-    overflow: auto;           /* beides: vertikal + horizontal scrollbar */
+    max-height: 200px;
+    max-width: 500px;
+    overflow: auto;
     box-shadow: 0 0 10px #00ff00;
-    margin-top: 20px;
 }
 
 .copy-btn {
-    position: absolute;
+    position: sticky;          /* NEU: bleibt beim Scrollen sichtbar */
     top: 5px;
     right: 5px;
-    background: black;        /* undurchsichtig schwarz, wenn Maus NICHT drüber */
+    float: right;
+    background: black;
     color: #00ff00;
     border: 1px solid #00ff00;
     cursor: pointer;
     padding: 5px;
-    transition: all 0.2s ease;
+    z-index: 10;
 }
 
 pre {
