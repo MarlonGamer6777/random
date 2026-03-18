@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01001000 01101001</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="centerbox">
+        <div>
+            <input type="text" id="pw" placeholder="Passwort">
+            <button onclick="checkPassword()">Login</button>
+        </div>
+        <button onclick="window.location.href = 'https://marlongamer6777.github.io/random/encryption/forgot_pw.html'">Passwort vergessen?</button>
+    </div>
+    <script>
+        function checkPassword() {
+            let pw = document.getElementById("pw").value;
+
+            if (pw === "01001101 01101001 01101110 01100101 01100011 01110010 01100001 01100110 01110100") {
+                window.location.href = "https://marlongamer6777.github.io/random/encryption/correct_pw.html";
+            } else {
+                document.getElementById("error").innerText = "Falsches Passwort!";
+            }
+        }
+    </script>
+</body>
+</html>
