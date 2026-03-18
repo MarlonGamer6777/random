@@ -15,13 +15,18 @@
         <button onclick="window.location.href = 'https://marlongamer6777.github.io/random/encryption/forgot_pw.html'">Passwort vergessen?</button>
     </div>
     <script>
+        count = 1
         function checkPassword() {
             let pw = document.getElementById("pw").value;
 
             if (pw === "01001101 01101001 01101110 01100101 01100011 01110010 01100001 01100110 01110100") {
                 window.location.href = "https://marlongamer6777.github.io/random/encryption/correct_pw.html";
             } else {
-                alert("Falsch!");
+                if count == 3 {
+                    alert("Versuch mal zu dekodieren")
+                } else {
+                    alert("Falsch!");
+                    count += 1
             }
         }
     </script>
