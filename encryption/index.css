@@ -1,0 +1,127 @@
+/* Hintergrund + Standard */
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Glitch / Neon Text */
+h1, h2, h3 {
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+/* Links */
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 5px #00ff00;
+}
+
+/* Buttons */
+button {
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: #00ff00;
+    color: black;
+}
+
+/* Inputs */
+input, textarea {
+    background-color: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 8px;
+    font-family: inherit;
+}
+
+/* Terminal Box */
+.terminal {
+    border: 1px solid #00ff00;
+    padding: 15px;
+    background-color: rgba(0, 255, 0, 0.05);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+/* Blinkender Cursor */
+.cursor::after {
+    content: "_";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Scanlines Effekt */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        rgba(0,255,0,0.05) 0px,
+        rgba(0,255,0,0.05) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+}
+
+.centerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.code-box {
+    position: relative;
+    background: #000;
+    border: 1px solid #00ff00;
+    padding: 15px;
+    max-height: 200px;       /* vertikale Höhe begrenzen */
+    max-width: 500px;        /* optionale Breite begrenzen */
+    overflow: auto;           /* beides: vertikal + horizontal scrollbar */
+    box-shadow: 0 0 10px #00ff00;
+    margin-top: 20px;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: black;        /* undurchsichtig schwarz, wenn Maus NICHT drüber */
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.2s ease;
+}
+
+pre {
+    margin: 0;
+    white-space: pre;         /* lange Zeilen umbrechen nicht */
+}
