@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code: 2398</title>
+    <link rel="stylesheet" href="css/hacker.css">
+</head>
+<body>
+    <!-- Inhalt -->
+    <div class="box">
+        <div class="centerbox">
+            <input type="password" id="pw" placeholder="Passwort">
+            <button onclick="checkPassword()">GO</button>
+        </div>
+    </div>
+    <p>Kann es sein, dass du auf den vorherigen Seiten etwas vergessen hast?</p>
+    <p>Ende: zdtyrgdvbdts</p>
+
+    <!-- Scripts -->
+    <script>
+       function checkPassword() {
+           let pw = document.getElementById("pw").value;
+
+           if (pw === "2398") { window.location.href = "https://marlongamer6777.github.io/random/escape_room/index.html"; } else { alert("Falsch!"); }
+           document.getElementById("pw").value = "";
+       }
+    </script>
+</body>
+</html>

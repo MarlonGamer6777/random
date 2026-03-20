@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="css/hacker.css">
+</head>
+<body>
+    <!-- Inhalt -->
+    <div class="box">
+        <h2>Willkommen zu meinem Escape Room!</h2>
+        <div class="centerbox">
+            <input id="pw" type="password" placeholder="Passwort">
+            <button onclick="checkPassword()">GO</button>
+        </div>
+    </div>
+    <p>Wenn du entkommen willst, musst du die Hinweise, die über mehrere Seiten verteilt sind, zusammensetzen, um daraus das Passwort zu bekommen</p>
+    <a href="https://marlongamer6777.github.io/random/escape_room/first.html" class="invis" target="_blank" id="first">Erste Seite</a>
+
+    <!-- Scripts -->
+     <script>
+        function checkPassword() {
+            let pw = document.getElementById("pw").value;
+
+            if (pw === "ArgdgadfVdfdfdfDFdvyvbsbsrzwstdyhfbgrszdtyrgdvbdts") { window.location.href = "https://marlongamer6777.github.io/random/escape_room/escaped.html"; } else { alert("Falsch!"); }
+            document.getElementById("pw").value = "";
+        }
+        setTimeout(function() {
+            let element = document.getElementById("first");
+            element.classList.remove("invis");
+        }, 60000);
+     </script>
+</body>
+</html>
