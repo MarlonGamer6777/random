@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "commandMode": "COMMAND_CUSTOM",
+  "command": "spawn",
+  "actions": [
+    {
+      "command": "tp $executor_name() 929 63 1307",
+      "commandType": "SERVER"
+    }
+  ]
+}s
