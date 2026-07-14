@@ -1,7 +1,7 @@
 # Show vanish status in the action bar
-action-bar=true
+action-bar=false
 # Show vanish status in the boss bar
-boss-bar=false
+boss-bar=true
 # Prevents vanished players from using chat
 disable-chat=false
 # Prevents vanished players from using /msg
